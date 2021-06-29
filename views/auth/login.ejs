@@ -1,6 +1,6 @@
-<div class="container py-5" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-    <div class="card" style="width:100%; max-width: 35rem; background-color: rgb(172, 200, 224); margin-top: 80px;">
-        <h3 class="text-center mb-3" style="padding: 30px;">Login to Microsoft Connect</h3>
+<div class="container py-5" style="display: flex; justify-content: center; flex-direction: column; align-items: center; ">
+    <div class="card" style="width:100%; max-width: 35rem; background-color: #9da3f0; margin-top: 80px;">
+        <h3 class="text-center mb-3" style="padding: 30px;">LOGIN</h3>
         <div class="card-body">
             <form action="/login" method="POST">
                 <% if(locals.messages.success){ %>
@@ -14,7 +14,7 @@
                             </div>
                             <% } %>
                                 <div class="mb-3">
-                                    <label class="form-label" style="font-weight: bold;">Username</label>
+                                    <label class="form-label">Username</label>
                                     <div class="input-group">
                                         <div class="input-group-text">
                                             <ion-icon name="person-circle-outline"></ion-icon>
@@ -23,7 +23,7 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label" style="font-weight: bold;">Password</label>
+                                    <label class="form-label">Password</label>
                                     <div class="input-group">
                                         <div class="input-group-text">
                                             <ion-icon name="lock-closed-outline"></ion-icon>
@@ -32,10 +32,15 @@
                                             placeholder="Password">
                                     </div>
                                 </div>
-                 <button style="width: 100%; padding: 15 px; " type="submit" class="btn btn-primary">Login</button>
+                 <button style="width: 50%; padding: 15 px; background-color: #505AC9; margin-left: 130px;" type="submit" class="btn btn-primary">Login</button>
                  <p class="m-0" style="padding: 10px;">Don't have an account?<a href="/signup" style="text-decoration: none;">  Sign Up</a></p>
             </form>
         </div>
     </div>
 </div>
+<style>
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+</style>
 
