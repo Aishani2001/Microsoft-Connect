@@ -1,17 +1,13 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid nav-contcnt">
-        <a class="navbar-brand" href="#" style="color: #06438d;"> <span style="font-weight: bold;">Microsoft</span>Connect</a>
+    <div class="container-fluid nav-content">
+        <a class="navbar-brand" href="#" style="color: #2b3285;"> <span style="font-weight: bold;">Microsoft</span>Connect</a>
         <div class="d-flex">
-            <p class="m-0 px-3" style="font-weight: bold; color: #8aaedb;">
-                <%= user.name %>
-            </p>
-            <a class="icon" href="/logout">
-                <ion-icon name="exit-outline"></ion-icon>
-            </a>
+            <p class="m-0 px-3" style="font-weight: bold; color: #5a64cf;"><%= user.name %></p>
+            <a class="icon" href="/logout"><ion-icon name="exit-outline"></ion-icon></a>
         </div>
         <style>
             @media (max-width: 440px) {
-                .nav-contcnt {
+                .nav-content {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -23,7 +19,6 @@
                     white-space: nowrap;
                 }
             }
-
             .icon {
                 text-decoration: none;
                 color: #5F6368;
@@ -34,39 +29,36 @@
                 border-radius: .25rem;
                 margin: 0rem .35rem;
             }
-
             .icon:hover {
                 background-color: rgb(197, 197, 197);
                 color: #5F6368;
             }
-
             .icon ion-icon {
                 font-size: 1.7rem;
             }
         </style>
     </div>
 </nav>
-<div class="container py-5 " style="margin-left: 480px; ">
+<div class="container py-5 ">
     <div class="row g-3">
-        <div class="col-md-6">
-            <h1 class="mb-1">
-                Create a new meeting or join a pre-existing meeting.
-            </h1>
-            <div class="a123 my-5" style="display: flex; ">
-                <a class="btn btn-primary new-meeting" style="width: 180px;" href="/new-meeting" role="button">New
-                    Meeting</a>
-                <form action="join-room" style="margin-left:4rem; width: 500px;" method="POST">
+        <div class="col-md-12">
+            <h1 class="mb-1">Welcome! Join a meeting or make a new one.</h1>
+            <div class="a123 my-5" style="display: flex;">
+                <a class="btn btn-primary new-meeting" style="width: 180px; background-color: #2b3285;" href="/new-meeting" role="button">New Meeting</a>
+                <form action="join-room" method="POST" style="margin-left:4rem; width: 500px;">
                     <div class="input-group ">
-                        <span class="input-group-text" id="inputGroup-sizing-default">
-                            <ion-icon name="planet-outline"></ion-icon>
-                        </span>
-                        <input name="room_id" type="text" class="form-control" placeholder="Enter code/link"
-                            aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <span class="input-group-text" id="inputGroup-sizing-default"><ion-icon name="planet-outline"></ion-icon></span>
+                        <input name="room_id" type="text" class="form-control" placeholder="Enter code/link" aria-label="Recipient's username" aria-describedby="button-addon2">
                         <button class="btn btn-outline-primary" type="submit" id="button-addon2">Join</button>
                     </div>
                 </form>
             </div>
-            <hr>
         </div>
     </div>
 </div>
+
+<style>
+    .body{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>

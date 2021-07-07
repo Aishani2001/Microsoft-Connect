@@ -31,11 +31,11 @@ body {
 body {
   background-color: #1b2127;
   background-color: #1b2127;
-  font-family: "Comfortaa", cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 ::after,
 ::before {
-  font-family: "Comfortaa", cursive;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 button {
   background-color: transparent;
@@ -324,7 +324,7 @@ footer {
     margin: 0px;
     margin-top: 8px;
     font-size: 14px;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #3c4043;
   }
   .dialogue-head {
@@ -459,9 +459,9 @@ footer {
     bottom: 100px;
   }
 }
-// chad box
+// chat box
 .chat-box-wrapper {
-  font-family: "Open Sans", sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-shadow: 0 0px 10px rgba(var(--clr1), 0.3);
   opacity: 1;
   visibility: hidden;

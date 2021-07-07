@@ -1,25 +1,11 @@
-function detectMob() {
-  const toMatch = [
-    /Android/i,
-    /webOS/i,
-    /iPhone/i,
-    /iPad/i,
-    /iPod/i,
-    /BlackBerry/i,
-    /Windows Phone/i,
-  ];
-  return toMatch.some((toMatchItem) => {
-    return navigator.userAgent.match(toMatchItem);
-  });
-}
 const socket = io("/");
 const videoGrid = document.getElementById("video-grid");
-// const name = prompt("Your name");
+
 const myPeer = new Peer(undefined, {
   path: "/peerjs",
   host: "/",
-  // port: "3000",
 });
+
 var Peer_ID;
 const myVideo = document.createElement("video");
 myVideo.muted = true;
@@ -27,27 +13,18 @@ var myVideoStream;
 var myVideoTrack;
 const peers = {};
 
-navigator.mediaDevices
-  .getUserMedia({ audio: true })
-  .then((stream) => {
-    navigator.mediaDevices
-      .getUserMedia({
-        video: true,
-        audio: true,
-      })
-      .then((stream) => {
+navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
+    navigator.mediaDevices.getUserMedia({video: true, audio: true }).then((stream) => {
         myVideoStream = stream;
         myVideoTrack = stream.getVideoTracks()[0];
         processStream(myVideoStream);
       });
-  })
-  .catch((err) => {
+  }).catch((err) => {      //if the user denies permission to access video or audio
     navigator.mediaDevices
       .getUserMedia({
         video: true,
         audio: false,
-      })
-      .then((stream) => {
+      }).then((stream) => {
         myVideoStream = stream;
         processStream(myVideoStream);
       });
@@ -67,6 +44,7 @@ function processStream(stream) {
     audio: myVideoStream.getAudioTracks()[0].enabled,
     video: myVideoStream.getVideoTracks()[0].enabled,
   });
+
   // recieve the others stream
   myPeer.on("call", (call) => {
     peers[call.peer] = call;
@@ -113,8 +91,7 @@ function connectToNewUser(userId, stream) {
     fetch(`/user?peer=${call.peer}&room=${ROOM_ID}`)
       .then((res) => {
         return res.json();
-      })
-      .then((data) => {
+      }).then((data) => {
         addVideoStream(
           video,
           userVideoStream,
@@ -131,6 +108,7 @@ function connectToNewUser(userId, stream) {
 }
 var localAudioFXElement;
 function addVideoStream(video, stream, peerId, user, adminId) {
+
   // create microphone button
   const micBtn = document.createElement("button");
   micBtn.classList.add("video-element");
@@ -157,8 +135,6 @@ function addVideoStream(video, stream, peerId, user, adminId) {
   pinBtn.classList.add("pin-button");
   pinBtn.innerHTML = `<ion-icon name="expand-outline"></ion-icon>`;
 
-  
-
   // main wrapper
   const videoWrapper = document.createElement("div");
   videoWrapper.id = "video-wrapper";
@@ -173,7 +149,6 @@ function addVideoStream(video, stream, peerId, user, adminId) {
   const elementsWrapper = document.createElement("div");
   elementsWrapper.classList.add("elements-wrapper");
   elementsWrapper.appendChild(namePara);
-  // elementsWrapper.appendChild(optionBtn);
   elementsWrapper.appendChild(pinBtn);
   elementsWrapper.appendChild(micBtn);
   elementsWrapper.appendChild(audioFXElement);
@@ -230,16 +205,14 @@ shareScreenBtn.addEventListener("click", (e) => {
   if (e.target.classList.contains("true")) return;
   e.target.setAttribute("tool_tip", "You are already presenting screen");
   e.target.classList.add("true");
-  navigator.mediaDevices
-    .getDisplayMedia({
+  navigator.mediaDevices.getDisplayMedia({
       video: true,
       audio: {
         echoCancellation: true,
         noiseSuppression: true,
         sampleRate: 44100,
       },
-    })
-    .then((stream) => {
+    }).then((stream) => {
       var videoTrack = stream.getVideoTracks()[0];
       myVideoTrack = myVideoStream.getVideoTracks()[0];
       replaceVideoTrack(myVideoStream, videoTrack);
@@ -290,8 +263,6 @@ const crossBtnClickEvent = (e) => {
     e.target.remove();
   }
 };
-
-// External
 
 // video toggle
 const videoToggleBtn = document.getElementById("video-toggle");
@@ -357,8 +328,6 @@ const videoWrapperMicToggle = (element, type) => {
     micButtons[3].classList.add("off");
   }
 };
-
-
 
 const meetingToggleBtn = document.getElementById("meeting-toggle");
 meetingToggleBtn.addEventListener("click", (e) => {
@@ -433,9 +402,6 @@ const replaceVideoTrack = (stream, videoTrack) => {
   stream.addTrack(videoTrack);
 };
 
-
-if (detectMob()) shareScreenBtn.remove();
-else camToggleBtn.remove();
 class SE {
   constructor(mediaStream) {
     this.mediaStream = mediaStream;
@@ -459,6 +425,7 @@ class SE {
     const source = this.audioCTX.createMediaStreamSource(this.mediaStream);
     source.connect(this.analyser);
 
+    //If the array has fewer elements than the AnalyserNode.frequencyBinCount, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
     const frameLoop = () => {
       window.requestAnimationFrame(frameLoop);
       let fbc_array = new Uint8Array(this.analyser.frequencyBinCount);
@@ -488,7 +455,7 @@ class SE {
     this.element.remove();
   }
 }
-// if (USER_TYPE !== "admin") recordingBtn.remove();
+
 const scrollDown = (query) => {
   var objDiv = document.querySelector(query);
   objDiv.scrollTop = objDiv.scrollHeight;
