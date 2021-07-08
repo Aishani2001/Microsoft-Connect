@@ -34,8 +34,7 @@ body {
 }
 
 body {
-  background-color: #1b2127;
-  background-color: #1b2127;
+  background-color: #bdccdb;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -337,10 +336,10 @@ footer .footer-wrapper {
 
 footer .footer-wrapper .footer-elements-wrapper,
 footer .footer-wrapper .options-wrapper {
-  background-color: rgba(var(--color4), 1);
-  margin: 0 0.5rem;
+  background-color: var(--clr2);
+  margin: 0 1rem;
   border-radius: 0.5rem;
-  border: 2px solid rgba(var(--color3), 0.8);
+  border: 2px solid rgba(var(--clr1), 0.8);
 }
 
 footer .footer-wrapper .footer-elements-wrapper ion-icon,
@@ -376,7 +375,7 @@ footer .footer-wrapper .footer-elements:hover {
 }
 
 footer .footer-wrapper .footer-elements:active {
-  background-color: #353b42;
+  background-color: rgba(var(--clr2), 1)
 }
 
 footer .footer-wrapper .call-button ion-icon {
@@ -407,7 +406,7 @@ footer .footer-wrapper .blink ion-icon {
 
 @media (hover: hover) {
   footer .footer-wrapper .footer-elements:hover {
-    background-color: #353b42;
+    background-color: rgba(var(--clr4),1);
   }
   footer .footer-wrapper .call-end-button:hover {
     background-color: rgba(var(--color6), 0.1);
@@ -538,7 +537,7 @@ footer .footer-wrapper .blink ion-icon {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: white;
+  background-color: var(--clr2);
   -webkit-box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0px 10px rgba(0, 0, 0, 0.3);
   height: 50px;
@@ -588,20 +587,16 @@ footer .footer-wrapper .blink ion-icon {
   padding: 0px 16px;
   -webkit-user-select: none;
   -moz-user-select: none;
-  color: #5f6368;
+  color: #010203;
 }
 
 .tool-bar-wrapper .tool-bar-button:hover {
   outline: none;
 }
 
-.tool-bar-wrapper .tool-bar-button:active {
-  background-color: white;
-}
-
 .tool-bar-wrapper .tool-bar-button ion-icon {
   font-size: 1.5rem;
-  color: #5f6368;
+  color: #000000;
 }
 
 .tool-bar-wrapper #time {
@@ -641,9 +636,9 @@ footer .footer-wrapper .blink ion-icon {
   right: 0;
   right: -350px;
   width: 350px;
-  height: calc(100% - 80px);
+  height: 100%;
   padding: 1rem 0rem;
-  background-color: rgba(var(--color1), 1);
+  background-color: var(--clr2);
   border-bottom-left-radius: 0.25rem;
   border-left: 2px solid rgba(var(--color3), 1);
   border-bottom: 2px solid rgba(var(--color3), 1);
@@ -716,8 +711,8 @@ footer .footer-wrapper .blink ion-icon {
   border-radius: none;
   outline: none;
   resize: none;
-  padding: 0.5rem;
-  background-color: rgba(var(--color1), 1);
+  padding: 1rem;
+  background-color: var(--clr1);
   color: white;
 }
 
@@ -831,6 +826,7 @@ span.time {
 .chat .message {
   display: inline-block;
   color: white;
+  background-color: gray;
   padding: 0.5rem;
   margin-top: 0.25rem;
   border-radius: 0.85rem;
@@ -849,8 +845,7 @@ span.time {
 
 .user .message {
   border-top-left-radius: 0px;
-  /* background-color: #3d5a80; */
-  border: 1px solid rgba(var(--color3), 1);
+  border: 1px solid rgba(var(--clr4), 1);
   color: white;
 }
 
@@ -863,7 +858,7 @@ span.time {
 
 .me .message {
   border-top-right-radius: 0px;
-  background-color: rgba(var(--color3), 1);
+  background-color: rgba(var(--clr3), 1);
   color: white;
 }
 
