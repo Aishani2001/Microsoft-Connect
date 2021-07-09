@@ -21,7 +21,7 @@ route.post("/", notAuthorize, (req, res) => {
         password: req.body.password,
       }).save((err, data) => {
         req.flash("success", "Signup Successful");
-        res.redirect("/signup");
+        res.redirect("/login");
       });
     }
   });
