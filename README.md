@@ -1,6 +1,7 @@
 # Microsoft Connect
 
 A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <br>
+![App Screenshot](./screenshots/app.jpg)
 
 ## Steps to join call
 - Click the link given under deployment. You will be redirected to the login page.
