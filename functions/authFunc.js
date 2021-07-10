@@ -11,3 +11,4 @@ const notAuthorize = (req, res, next) => {
   return res.redirect("/");
 };
 module.exports = { authorize, notAuthorize };
+
