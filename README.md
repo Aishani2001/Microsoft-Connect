@@ -11,7 +11,7 @@ A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <b
 
 ## Screenshots
 
-![App Screenshot](./screenshots/2 people call.jpg)
+![App Screenshot](./screenshots/2call.jpg)
 
 ![App Screenshot](./screenshots/room.jpg)
 
