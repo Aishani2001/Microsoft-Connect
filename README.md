@@ -9,6 +9,10 @@ A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <b
 - To join call, click on the green "Join Call" button. Only then you can video call with your friends or chat.
 - To use two different accounts, open the app once from the normal browser and once from the incognito mode. You should be able to video call through two different accounts then.
 
+## Deployment
+Deployed on Heroku.
+- #### View app [here](https://microsoft-connect.herokuapp.com/).
+
 ## Screenshots
 
 ![App Screenshot](./screenshots/2call.jpg)
@@ -43,8 +47,6 @@ A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <b
 - #### Server used : [Express JS](https://expressjs.com/)
 - #### Database used : [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 
-## Deployment
-Deployed on Heroku.
-- #### View app [here](https://microsoft-connect.herokuapp.com).
+
 
 
