@@ -2,7 +2,16 @@
 
 A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <br>
 
+## Steps to join call
+- Click the link given under deployment. You will be redirected to the login page.
+- For first time users, go to signup page and make an account. Use the username and password to login.
+- Click on new meeting to start your own meeting or if you wish to join a pre-existing meeting, paste in the ID that was shared with you and enter the room.
+- To join call, click on the green "Join Call" button. Only then you can video call with your friends or chat.
+- To use two different accounts, open the app once from the normal browser and once from the incognito mode. You should be able to video call through two different accounts then.
+
 ## Screenshots
+
+![App Screenshot](./screenshots/2 people call.jpg)
 
 ![App Screenshot](./screenshots/room.jpg)
 
