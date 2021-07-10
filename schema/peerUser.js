@@ -17,5 +17,4 @@ const peerUser = mongoose.Schema({
     required: true,
   },
 });
-
 module.exports = new mongoose.model("peerUser", peerUser);
