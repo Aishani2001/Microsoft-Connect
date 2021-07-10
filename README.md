@@ -36,6 +36,6 @@ A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <b
 
 ## Deployment
 Deployed on Heroku.
-- #### Link : (Aishani2001/Meet-Your-Team)
+- #### View app [here](Aishani2001/Meet-Your-Team).
 
 
