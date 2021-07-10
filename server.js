@@ -136,3 +136,4 @@ io.on("connection", (socket) => {
 
 //listening on port 3000 when running locally
 server.listen(process.env.PORT || 3000);
+
