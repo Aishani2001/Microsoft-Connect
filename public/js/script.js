@@ -424,7 +424,6 @@ class SE {
     console.log(this.audioCTX);
     const source = this.audioCTX.createMediaStreamSource(this.mediaStream);
     source.connect(this.analyser);
-
     //If the array has fewer elements than the AnalyserNode.frequencyBinCount, excess elements are dropped. If it has more elements than needed, excess elements are ignored.
     const frameLoop = () => {
       window.requestAnimationFrame(frameLoop);
