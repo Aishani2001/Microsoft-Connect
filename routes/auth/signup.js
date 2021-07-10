@@ -28,3 +28,4 @@ route.post("/", notAuthorize, (req, res) => {
 });
 
 module.exports = route;
+
