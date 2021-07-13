@@ -12,7 +12,7 @@ A microsoft teams clone web-app made under the Microsoft Engage Program 2021. <b
 
 ## Deployment
 Deployed on Heroku.
-- #### View app [here](https://microsoft-connect.herokuapp.com/).
+- #### View the app [here](https://microsoft-connect.herokuapp.com/).
 
 ## Video Submission
 - #### View video [here](https://www.youtube.com/watch?v=r_xdPrjfzlA).
