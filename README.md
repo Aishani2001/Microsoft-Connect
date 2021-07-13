@@ -15,7 +15,7 @@ Deployed on Heroku.
 - #### View app [here](https://microsoft-connect.herokuapp.com/).
 
 ## Video Submission
-- ####View video [here](https://www.youtube.com/watch?v=r_xdPrjfzlA).
+- #### View video [here](https://www.youtube.com/watch?v=r_xdPrjfzlA).
 
 ## Screenshots
 
